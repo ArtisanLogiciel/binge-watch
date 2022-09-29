@@ -3,9 +3,10 @@ import { useState } from 'react'
 function App() {
 
   return (
-      <div>
-          <p className={`text-white bg-violet-400`}>
+      <div className={`bg-black h-screen`}>
+          <p className={`text-white`}>
               Let's go binge watch !
+              comment ça ?
           </p>
       </div>
   )
