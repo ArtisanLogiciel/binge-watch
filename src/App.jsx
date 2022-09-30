@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from 'react-dom';
-import PopCorn from './assets/popcorn.svg'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './views/Home'
+import Error404 from './views/Error404'
+import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
-      <div className="bg-gray-900 h-screen">
-        <img src={PopCorn} alt="logo" className="mx-auto" />
-        <h1 className={`text-white text-4xl text-center`}>BingeWatch</h1>
-      </div>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
