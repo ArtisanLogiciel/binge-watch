@@ -10,14 +10,22 @@ import {
     createUserWithEmailAndPassword,
     onAuthStateChanged
 } from "firebase/auth"
+import LogPage from "./views/LogPage";
 
 
 function App() {
     
-    // test
-    const signUp = (email, pwd) => createUserWithEmailAndPassword(auth, email, pwd)
+    // INTERNAL STATES
+    const [logged, setLogged] = useState(false)
     
     
+    // if not logged
+    if (!logged) return (
+        <LogPage setLogged={setLogged}/>
+    )
+    
+    
+    // if logged :
   return (
     <>
       <NavBar />
@@ -27,9 +35,6 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
-        {signUp ? <div>
-            {JSON.stringify(signUp("email", "pwd"))}
-        </div> : null}
     </>
   );
 }
