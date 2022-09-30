@@ -1,15 +1,19 @@
-import { useState } from 'react'
-
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './views/Home'
+import Error404 from './views/Error404'
+import NavBar from "./components/NavBar";
 function App() {
-
   return (
-      <div className={`bg-black h-screen`}>
-          <p className={`text-white`}>
-              Let's go binge watch !
-              comment ça ?
-          </p>
-      </div>
-  )
+    <>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
-
-export default App
+export default App;
