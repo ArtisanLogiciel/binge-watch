@@ -19,7 +19,8 @@ export default function LogPage({ setLogged }) {
         className={`fixed top-0 left-0 right-0 h-16 bg-gray-600 flex items-center justify-between`}
       >
         <div>
-          <h1 className="text-xl m-2 text-orange-400">Binge Watch</h1>
+          <h1 className="text-xl text-orange-400 text-center">Binge Watch</h1>
+          <p>Where you want, When you want !</p>
         </div>
         <div className={`flex text-white`}>
           <button className={`bg-orange-600 px-1 mx-2 rounded`}>
