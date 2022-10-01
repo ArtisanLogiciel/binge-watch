@@ -25,8 +25,8 @@ module.exports = {
           regular: '#555555',
           DEFAULT: '#2e2e2e',
         },
-        violet: {
-          DEFAULT: '#b18abf',
+        binge: {
+          DEFAULT: '#ea9814',
           medium: '#945da8',
           dark: '#813c9a',
         },

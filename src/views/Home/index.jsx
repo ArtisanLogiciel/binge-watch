@@ -1,5 +1,5 @@
 import React from "react";
-import PopCorn from '../assets/popcorn.svg'
+import PopCorn from '../../assets/popcorn.svg'
 
 function Home() {
   return (
@@ -10,3 +10,4 @@ function Home() {
   );
 }
 export default Home;
+
