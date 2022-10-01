@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './views/Home'
+import Home from './views/Home/index'
 import Error404 from './views/Error404'
 import NavBar from "./components/NavBar";
 import {auth} from "../firebase-config"
@@ -27,7 +27,8 @@ function App() {
     
     // if logged :
   return (
-    <>
+    <div>
+        test CONTINUER
       <NavBar />
       <BrowserRouter>
         <Routes>
@@ -35,7 +36,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

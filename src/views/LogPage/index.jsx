@@ -1,38 +1,68 @@
-import React from 'react';
+import React, { useState } from "react";
+import Button from "../../components/Button";
 
-export default function LogPage({setLogged}) {
-    
-    return (
-        <div className={`bg-black text-white`}>
-            <div id={'topLogBar'} className={`fixed top-0 left-0 right-0 h-16 bg-gray-600 flex items-center justify-between`}>
-                <div>
-                    LOGO
-                </div>
-                <div className={`flex text-white`}>
-                    <button className={`bg-blue-500`}>s'inscrire</button>
-                    <button className={`bg-black hover:bg-white hover:text-black`}
-                        onClick={()=> setLogged(true)}
-                    >s'identifier</button>
-                </div>
-            </div>
-    
-            <div id={'invite'} className={`h-screen pt-36 mt-16 border`}>
-                <p>bla bla bla</p>
-                <p>allé vient du coté obscur on a des cookies</p>
-                <input type="text" placeholder={'ton email'}/>
-                <p>bla bla bla</p>
-            </div>
-    
-            <div className={`h-screen pt-36 mt-12 border`}>
-                <p>bla bla bla</p>
-                <p>bla bla bla</p>
-            </div>
-    
-            <div className={`h-screen pt-36 mt-12 border`}>
-                <p>bla bla bla</p>
-                <p>bla bla bla</p>
-            </div>
-            
+export default function LogPage({ setLogged }) {
+  const [email, setEmail] = useState("exemple@exemple.com");
+  const [error, setError] = useState(false);
+  const handleEmailChange = (e) => {
+    // vérifie si l'email contient un @ et un .
+    if (e.target.value.includes("@") && e.target.value.includes(".")) {
+      setError(false);
+    } else {
+      setError(true);
+    }
+    setEmail(e.target.value);
+  };
+  return (
+    <div className={`bg-black text-white`}>
+      <div
+        id={"topLogBar"}
+        className={`fixed top-0 left-0 right-0 h-16 bg-gray-600 flex items-center justify-between`}
+      >
+        <div>
+          <h1 className="text-xl m-2 text-binge">Binge Watch</h1>
         </div>
-    )
+        <div className={`flex text-white`}>
+          <Button className={`mx-2`}>
+            s'inscrire
+          </Button>
+          
+          <Button
+            className={`bg-black mx-2 hover:bg-white hover:text-black`}
+            onClick={() => setLogged(true)}
+          >
+            s'identifier
+          </Button>
+        </div>
+      </div>
+
+      <div id={"invite"} className={`h-screen pt-36 mt-16 border text-center`}>
+        <p>bla bla bla</p>
+        <p>allé vient du coté obscur on a des cookies</p>
+        <input
+          className="text-stone-700"
+          type="text"
+          placeholder="ton email"
+          onChange={handleEmailChange}
+        />{" "}
+        l'email : {email}{" "}
+        {error ? (
+          <span className="text-red-500">est invalide</span>
+        ) : (
+          <span className="text-green-500">est valide</span>
+        )}
+        <p>bla bla bla</p>
+      </div>
+
+      <div className={`h-screen pt-36 mt-12 border`}>
+        <p>bla bla bla</p>
+        <p>bla bla bla</p>
+      </div>
+
+      <div className={`h-screen pt-36 mt-12 border`}>
+        <p>bla bla bla</p>
+        <p>bla bla bla</p>
+      </div>
+    </div>
+  );
 }
