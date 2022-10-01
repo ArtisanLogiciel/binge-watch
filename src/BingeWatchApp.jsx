@@ -1,27 +1,32 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./views/Home/index";
+import Error404 from "./views/Error404";
+import NavBar from "./components/NavBar";
 import { auth } from "../firebase-config";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import Home from "./components/BingeHome";
-import Error404 from "./components/Error404";
-import LogPage from "./components/BingeLogPage";
+import LogPage from "./views/LogPage";
 
-function BingeWatchApp() {
+
+function MyApp() {
   // INTERNAL STATES
   const [logged, setLogged] = useState(false);
-  // if (!logged) return <LogPage setLogged={setLogged} />;
+
+  // if not logged
+  if (!logged) return <LogPage setLogged={setLogged} />;
 
   // if logged :
   return (
     <div>
+      test CONTINUER
+      <NavBar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/logged" element={<LogPage />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
@@ -29,4 +34,4 @@ function BingeWatchApp() {
   );
 }
 
-export default BingeWatchApp;
+export default MyApp

@@ -13,8 +13,8 @@ const theme = createTheme({
   },
 });
 
-const AppContextProviders = ({ children }) => {
+const AppProviders = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
-export { AppContextProviders };
+export { AppProviders };
