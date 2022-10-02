@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import Button from "./Button";
 
 export default function LogPage({ setLogged }) {
   const [email, setEmail] = useState("exemple@exemple.com");
