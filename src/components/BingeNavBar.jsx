@@ -16,7 +16,7 @@ function Button({onClick, className, children}) {
   )
 }
 
-function NavBar() {
+function BingeNavBar() {
   const margin10 = { margin: 10 };
   const [appBarStyle, setAppBarStyle] = React.useState({
     background: "transparent",
@@ -55,7 +55,7 @@ function NavBar() {
           </Link>
           <Link to="/series">
             <Typography style={margin10} variant="h6">
-              Serie
+              Séries
             </Typography>
           </Link>
           <Link to="/movies">
@@ -65,7 +65,7 @@ function NavBar() {
           </Link>
           <Link to="/news">
             <Typography style={margin10} variant="h6">
-              Nouveautés les plus regardées
+              Animes
             </Typography>
           </Link>
           <Link to="/logged">
@@ -79,4 +79,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default BingeNavBar;
