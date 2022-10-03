@@ -23,14 +23,14 @@ export default function LogPage({ setLogged }) {
           <p>Where you want, When you want !</p>
         </div>
         <div className={`flex text-white`}>
-          <button className={`bg-orange-600 px-1 mx-2 rounded`}>
-            s'inscrire
+          <button className={`bg-orange-500 p-4 mx-2 rounded`}>
+            S'INSCRIRE
           </button>
           <button
-            className={`bg-black mx-2 px-1 rounded hover:bg-white hover:text-black`}
+            className={`bg-black mx-2 p-4 rounded hover:bg-white hover:text-black`}
             onClick={() => setLogged(true)}
           >
-            s'identifier
+            S'IDENTIFIER
           </button>
         </div>
       </div>
