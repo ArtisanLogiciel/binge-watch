@@ -1,19 +1,17 @@
-import * as React from 'react'
-import {AppProviders} from './context'
-import MyApp from './BingeWatchApp'
+import * as React from "react";
+import { AppContextProviders } from "./context";
+import BingeWatchApp from "./BingeWatchApp";
 
 function App() {
   return (
-    <AppProviders>
+    <AppContextProviders>
       <AppConsumer />
-    </AppProviders>
-  )
+    </AppContextProviders>
+  );
 }
 
 const AppConsumer = () => {
-  return (
-    <MyApp/>
-  )
-}
+  return <BingeWatchApp />;
+};
 
-export {App}
+export { App };
