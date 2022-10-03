@@ -46,7 +46,6 @@ function NavBar() {
 
   return (
     <div>
-      <Button />
       <AppBar style={appBarStyle}>
         <Toolbar>
           <Link to="/">

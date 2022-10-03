@@ -10,7 +10,7 @@ import Home from "./components/BingeHome";
 import Error404 from "./components/Error404";
 import LogPage from "./components/BingeLogPage";
 
-function MyApp() {
+function BingeWatchApp() {
   // INTERNAL STATES
   const [logged, setLogged] = useState(false);
   // if (!logged) return <LogPage setLogged={setLogged} />;
@@ -29,4 +29,4 @@ function MyApp() {
   );
 }
 
-export default MyApp;
+export default BingeWatchApp;
