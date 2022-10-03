@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "./Button";
 
 export default function LogPage({ setLogged }) {
   const [email, setEmail] = useState("exemple@exemple.com");
@@ -24,7 +23,7 @@ export default function LogPage({ setLogged }) {
           <p>Where you want, When you want !</p>
         </div>
         <div className={`flex text-white`}>
-          <button className={`bg-orange-400 p-4 mx-2 rounded`}>
+          <button className={`bg-orange-500 p-4 mx-2 rounded`}>
             S'INSCRIRE
           </button>
           <button
