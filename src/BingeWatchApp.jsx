@@ -11,8 +11,7 @@ import {
 } from "firebase/auth";
 import LogPage from "./views/LogPage/index";
 
-
-function MyApp() {
+function BingeWatchApp() {
   // INTERNAL STATES
   const [logged, setLogged] = useState(false);
 
@@ -36,4 +35,4 @@ function MyApp() {
   );
 }
 
-export default MyApp
+export default BingeWatchApp;
