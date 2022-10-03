@@ -1,0 +1,59 @@
+/* BingeHeader */
+.banner {
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  object-fit: contain;
+  height: 448px;
+  position: relative;
+}
+
+.banner__contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 448px;
+  width: 100%;
+  /* position: relative; */
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.synopsis {
+  color: #fff;
+  line-height: normal;
+  width: 100%;
+  font-weight: 400;
+  font-size: calc(18px + (4) * ((100vw - 300px) / (1600 - 300)));
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+  margin-top: 0.1vw;
+  max-width: 500px;
+  padding-top: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  z-index: -1;
+}
+
+.banner__fadeLeft {
+  height: 100%;
+  width: 750px;
+  background-image: linear-gradient(90deg, rgb(17 24 39), 94.5%, transparent);
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+
+.banner__image {
+  background-image: url("../assets/images/casa-de-papel.jpeg");
+  width: calc(100% - 550px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -3;
+}
