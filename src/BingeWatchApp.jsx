@@ -9,7 +9,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import LogPage from "./views/LogPage";
+import LogPage from "./views/LogPage/index";
 
 
 function MyApp() {
