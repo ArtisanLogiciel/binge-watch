@@ -10,7 +10,7 @@ import InputBase from '@mui/material/InputBase'
 function NavBar() {
   return (
     <AppBar>
-
+testouille
     </AppBar>
   )
 }
