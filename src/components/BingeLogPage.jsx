@@ -20,19 +20,19 @@ export default function LogPage({ setLogged }) {
         className={`fixed top-0 left-0 right-0 h-16 bg-gray-600 flex items-center justify-between`}
       >
         <div>
-          <h1 className="text-xl m-2 text-binge">Binge Watch</h1>
+          <h1 className="text-xl text-orange-400 text-center">Binge Watch</h1>
+          <p>Where you want, When you want !</p>
         </div>
         <div className={`flex text-white`}>
-          <Button className={`mx-2`}>
-            s'inscrire
-          </Button>
-          
-          <Button
-            className={`bg-black mx-2 hover:bg-white hover:text-black`}
+          <button className={`bg-orange-400 p-4 mx-2 rounded`}>
+            S'INSCRIRE
+          </button>
+          <button
+            className={`bg-black mx-2 p-4 rounded hover:bg-white hover:text-black`}
             onClick={() => setLogged(true)}
           >
-            s'identifier
-          </Button>
+            S'IDENTIFIER
+          </button>
         </div>
       </div>
 
