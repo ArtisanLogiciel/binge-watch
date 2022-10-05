@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 export default function LogPage({ setLogged }) {
   const [email, setEmail] = useState("exemple@exemple.com");
   const [error, setError] = useState(false);
+  
   const handleEmailChange = (e) => {
     // vérifie si l'email contient un @ et un .
     if (e.target.value.includes("@") && e.target.value.includes(".")) {
@@ -13,6 +14,8 @@ export default function LogPage({ setLogged }) {
     }
     setEmail(e.target.value);
   };
+  
+  
   return (
     <div className={`bg-black text-white`}>
       <div
