@@ -3,23 +3,13 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
+//import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+//import AccountCircle from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 
-function Button({ onClick, className, children }) {
-  return (
-    <div
-      className={`bg-binge p-4 rounded uppercase ${className}`}
-      role={"Button"}
-      onClick={onClick}
-    >
-      {children}
-    </div>
-  );
-}
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -139,7 +129,9 @@ function BingeNavBar() {
           </Link>
           <Search>
             <SearchIconWrapper>
+{/*
               <SearchIcon />
+*/}
             </SearchIconWrapper>
             <StyledInputBase
               // onKeyDown={}
@@ -158,7 +150,9 @@ function BingeNavBar() {
               onClick={handleMenu}
               color="inherit"
             >
+{/*
               <AccountCircle />
+*/}
             </IconButton>
           </div>
         </Toolbar>

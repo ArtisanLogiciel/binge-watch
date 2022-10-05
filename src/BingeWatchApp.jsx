@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./views/Home/index";
+import Home from "./views/Home";
 import Error404 from "./views/Error404";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/BingeNavBar";
 import { auth } from "../firebase-config";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import LogPage from "./views/LogPage/index";
+import LogPage from "./views/LogPage";
 
 function BingeWatchApp() {
   // INTERNAL STATES

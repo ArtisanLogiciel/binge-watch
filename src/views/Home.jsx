@@ -1,7 +1,7 @@
 import React from "react";
 // import PopCorn from "../assets/images/popcorn.svg";
-import BingeNavBar from "./BingeNavBar";
-import BingeHeader from "./BingeHeader";
+import BingeNavBar from "../components/BingeNavBar";
+import BingeHeader from "../components/BingeHeader";
 
 function Home() {
   return (

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import Button from "../components/Button";
+
 
 export default function LogPage({ setLogged }) {
   const [email, setEmail] = useState("exemple@exemple.com");
   const [error, setError] = useState(false);
+  
   const handleEmailChange = (e) => {
     // vérifie si l'email contient un @ et un .
     if (e.target.value.includes("@") && e.target.value.includes(".")) {
@@ -12,6 +15,9 @@ export default function LogPage({ setLogged }) {
     }
     setEmail(e.target.value);
   };
+  
+  
+  
   return (
     <div className={`bg-black text-white`}>
       <div
@@ -23,15 +29,15 @@ export default function LogPage({ setLogged }) {
           <p>Where you want, When you want !</p>
         </div>
         <div className={`flex text-white`}>
-          <button className={`bg-orange-400 p-4 mx-2 rounded`}>
+          <Button className={`bg-binge p-4 mx-2 rounded`}>
             S'INSCRIRE
-          </button>
-          <button
+          </Button>
+          <Button
             className={`bg-black mx-2 p-4 rounded hover:bg-white hover:text-black`}
             onClick={() => setLogged(true)}
           >
             S'IDENTIFIER
-          </button>
+          </Button>
         </div>
       </div>
 
