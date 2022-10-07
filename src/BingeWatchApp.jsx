@@ -23,8 +23,6 @@ function BingeWatchApp() {
   // if logged :
   return (
     <div>
-      test CONTINUER
-      <NavBar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

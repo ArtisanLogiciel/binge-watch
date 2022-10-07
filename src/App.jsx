@@ -11,7 +11,4 @@ function App() {
   )
 }
 
-
-}
-
 export {App}
