@@ -16,9 +16,9 @@ function BingeWatchApp() {
   const [logged, setLogged] = useState(false);
 
   // if not logged
-  if (!logged) {
-      return <LogPage setLogged={setLogged}/>
-  };
+  // if (!logged) {
+  //     return <LogPage setLogged={setLogged}/>
+  // };
 
   // if logged :
   return (
