@@ -80,6 +80,9 @@ module.exports = {
         appear: {
           '0%, 15%': {opacity:'0'}, '100%': {opacity:'1'}
         }
+      },
+      backgroundImage: {
+        'landing': `url("./src/assets/images/bg-landing.jpeg")`,
       }
     },
   },

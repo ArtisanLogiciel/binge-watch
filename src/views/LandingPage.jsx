@@ -4,8 +4,13 @@ import HiddenBar from "../components/HiddenBar";
 
 
 export default function LandingPage({ setLogged }) {
+    // INTERNAL STATES
     const [scrollY, setScrollY] = useState(0);
+    const [windowHeight, setWindowHeight] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(0);
     
+    
+    // watch vertical scroll to show/hide top bar
     const setScroll = useCallback(() => {
          setScrollY(window.scrollY)
     }, []);
@@ -14,6 +19,37 @@ export default function LandingPage({ setLogged }) {
         window.addEventListener('scroll', setScroll);
         return () => window.removeEventListener('scroll', setScroll);
     }, [setScrollY, setScroll])
+    
+    
+    // watch screen dimensions
+    const sizeX = useCallback(() => {
+        setWindowWidth(window.innerWidth)
+    }, [])
+    const sizeY = useCallback(() => {
+        setWindowHeight(window.innerHeight)
+    }, [])
+    
+    useEffect(()=> {
+        setWindowHeight(window.innerHeight)
+        window.addEventListener('resize', sizeY);
+        return () => window.removeEventListener('resize', sizeY);
+    }, [setWindowHeight])
+    
+    useEffect(()=> {
+        window.addEventListener('orientationchange', sizeY);
+        return () => window.removeEventListener('orientationchange', sizeY);
+    }, [setWindowHeight])
+    
+    useEffect(()=> {
+        setWindowWidth(window.innerWidth)
+        window.addEventListener('resize', sizeX);
+        return () => window.removeEventListener('resize', sizeX);
+    }, [setWindowWidth])
+    
+    useEffect(()=> {
+        window.addEventListener('orientationchange', sizeX);
+        return () => window.removeEventListener('orientationchange', sizeX);
+    }, [setWindowWidth])
 
     
     
@@ -35,31 +71,16 @@ export default function LandingPage({ setLogged }) {
   
   
   return (
-    <div className={`bg-black text-white`}>
-      <div
-        id={"topLogBar"}
-        className={`fixed top-0 left-0 right-0 h-16 bg-gray-600 flex items-center justify-between`}
-      >
-          <HiddenBar makeItVisible={scrollY > 100} />
-          
-        <div>
-          <h1 className="text-xl text-orange-400 text-center">Binge Watch</h1>
-          <p>Where you want, When you want !</p>
-        </div>
+    <div className={`text-white`}>
+        
+        <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} />
         
 
-      </div>
+      <div className={`absolute bg-landing bg-cover bg-no-repeat top-0`}
+           // use screen sizes to position and adapt background image
+           style={{height: windowHeight, width: windowWidth}}
+      >
 
-      <div id={"invite"} className={`h-screen pt-36 mt-16 border text-center`}>
-        <p>bla bla bla</p>
-        <p>allé vient du coté obscur on a des cookies</p>
-        <input
-          className="text-stone-700"
-          type="text"
-          placeholder="ton email"
-          //onChange={handleEmailChange}
-        />
-        <p>bla bla bla</p>
       </div>
 
       <div className={`h-screen pt-36 mt-12 border`}>
