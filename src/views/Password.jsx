@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 export default function Password({props}) {
     
@@ -6,3 +6,4 @@ export default function Password({props}) {
         <div>Name</div>
     )
 }
+

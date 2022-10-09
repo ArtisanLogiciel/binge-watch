@@ -33,9 +33,12 @@ html {
     font-family: Avenir, sans-serif;
     color: white;
 }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #f9f9f9;
+}
 
 body{
-    background-color: rgb(17 24 39);
+    background-color: black;
 }
 
 

@@ -12,8 +12,8 @@ module.exports = {
       'lg': '1.125rem',
       'xl': '1.25rem',
       '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
+      '3xl': '2rem',
+      '4xl': '2.75rem',
       '5xl': '3rem',
       '6xl': '4rem',
     },
@@ -22,20 +22,14 @@ module.exports = {
         '4.5': '18px'
       },
       colors: {
+        silver : '#a5a6a7',
         grey: {
-          light: '#f0f0f0',
-          medium: '#e5e5e5',
-          regular: '#555555',
-          DEFAULT: '#2e2e2e',
+          DEFAULT: '#31343e',
         },
         binge: {
           DEFAULT: '#ea9814',
           medium: '#945da8',
           dark: '#813c9a',
-        },
-        white: {
-          DEFAULT: '#fff',
-          transp50 : 'rgba(255,255,255,0.5)'
         }
       },
       screens: {
@@ -58,10 +52,12 @@ module.exports = {
       spacing: {
         '2.75':'0.6875rem',
         '4.5': '1.125rem',
+        '7.5': '1.875rem',
         '15': '3.75rem',
         '18': '4.5rem',
         '22': '5.5rem',
-        '34': '8.5rem'
+        '34': '8.5rem',
+        '37.5': '600px'
       },
       boxShadow: {
         strong: '0 10px 15px -3px rgba(0, 0, 0, 0.5)',
