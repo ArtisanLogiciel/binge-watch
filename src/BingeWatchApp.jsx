@@ -9,25 +9,42 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import LogPage from "./views/LogPage";
+import LandingPage from "./views/LandingPage";
+import Login from "./views/Login";
+import Password from "./views/Password";
+
+
 
 function BingeWatchApp() {
+  // USE CONTEXT
+  // place réservée pour les useContext
+  
   // INTERNAL STATES
-  const [logged, setLogged] = useState(false);
+  const [logged, setLogged] = useState(false); // sera remplacé par un état du AppContextProvider
+  useEffect(()=> {
+    const token = JSON.parse(localStorage.getItem("token")) // sera remplacé par un état du AppContextProvider
+    if (token) {setLogged(true)}
+  }, [])
 
-  // if not logged
-  // if (!logged) {
-  //     return <LogPage setLogged={setLogged}/>
-  // };
-
-  // if logged :
+  
+  
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+          {!logged ?
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/login/password" element={<Password />} />
+                <Route path="*" element={<LandingPage />} />
+              </Routes>
+              : // if logged
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="*" element={<Error404 />} />
+              </Routes>
+          }
       </BrowserRouter>
     </div>
   );

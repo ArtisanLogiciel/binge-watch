@@ -18,6 +18,9 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      lineHeight: {
+        '4.5': '18px'
+      },
       colors: {
         grey: {
           light: '#f0f0f0',
@@ -53,6 +56,7 @@ module.exports = {
         '100':'100',
       },
       spacing: {
+        '2.75':'0.6875rem',
         '4.5': '1.125rem',
         '15': '3.75rem',
         '18': '4.5rem',
