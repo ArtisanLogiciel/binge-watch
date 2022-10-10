@@ -13,9 +13,9 @@ module.exports = {
       'xl': '1.25rem',
       '2xl': '1.5rem',
       '3xl': '2rem',
-      '4xl': '2.75rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      '4xl': '2.5rem',
+      '5xl': '2.75rem',
+      '6xl': '3rem',
     },
     extend: {
       lineHeight: {
@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         silver : '#a5a6a7',
+        dark: '#040714',  // this is between black and navy
         grey: {
           DEFAULT: '#31343e',
         },
@@ -78,7 +79,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'landing': `url("./src/assets/images/bg-landing.jpeg")`,
+        'landing': `url("./src/assets/images/bg-landing-base.jpeg")`,
+        'landing-lg': `url("./src/assets/images/bg-landing-lg.jpeg")`,
       }
     },
   },

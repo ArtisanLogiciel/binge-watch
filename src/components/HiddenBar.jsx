@@ -7,7 +7,7 @@ export default function HiddenBar({makeItVisible}) {
     
     return (
         <div className={`fixed top-0 z-50 w-full h-[70px] flex justify-between items-center transition-colors
-                 ${makeItVisible ? 'bg-black duration-300' : 'bg-transparent duration-700'}`}>
+                 ${makeItVisible ? 'bg-dark duration-300' : 'bg-transparent duration-700'}`}>
             
             <div className={`${makeItVisible ? 'opacity-1 duration-300' : 'opacity-0 duration-700'}`}>
                 <LogoLink />
