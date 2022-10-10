@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import HiddenBar from "../components/HiddenBar";
 import Input from "../components/Input";
 import GoDown from "../components/GoDown";
+import Details from "../components/Details";
 
 
 export default function LandingPage({ setLogged }) {
@@ -79,7 +80,7 @@ export default function LandingPage({ setLogged }) {
   
   
   return (
-    <div className={`text-silver bg-dark`}>
+    <div className={`text-grey bg-dark`}>
         
         <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} />
     
@@ -93,7 +94,7 @@ export default function LandingPage({ setLogged }) {
             />
         </div>
         
-        <section className={`relative flex flex-col justify-center items-center lg:items-start mt-0 h-screen px-[5.6vw] z-50`}>
+        <section className={`relative flex flex-col justify-center items-center lg:items-start mt-0 h-screen px-[5.6vw] z-40`}>
             
             <div className={`flex flex-col justify-center lg:justify-start md:w-37.5 lg:w-1/2 pt-[30vw] md:pt-[40vw] lg:pt-0 space-y-4`}>
                 <div className={`mx-auto lg:ml-0 lg:mb-7.5`}>
@@ -117,24 +118,24 @@ export default function LandingPage({ setLogged }) {
                     Profitez gratuitement du service Binge Watch pour trouver le film ou la série qui vous plaira de regarder {now()}.
                 </p>
             </div>
-            <div className={`justify-self-center self-center lg:self-start mb-10 mt-auto`}>
+            <div className={`justify-self-center self-center lg:self-start mb-10 mt-auto z-0`}>
                 <GoDown offset={window.innerWidth < 768 ? 50 : 0}/>
             </div>
             
         </section>
     
         <section className={`relative flex flex-col md:flex-row justify-center items-center lg:justify-start mt-0 h-screen px-[5.6vw] z-10 `}>
-            <div className={`md:flex-1 lg:mr-8`}>
+            <div className={`md:flex-1 md:mr-4 lg:mr-8`}>
                 <img src="./src/assets/images/landing-sect2.png" alt="aperçu Binge Watch"/>
             </div>
             
             <div className={`flex-1 flex flex-col justify-center lg:justify-start md:w-37.5 lg:w-1/2 pt-0 lg:pt-0 space-y-4`}>
-                <p className={`text-center lg:text-left`}>
-                    <h2 className={`text-2xl md:text-3xl lg:text-4xl font-Avenir font-bold leading-tight mb-2`}>
+                <p className={`text-center md:text-left`}>
+                    <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2`}>
                         Notez, commentez et gardez vos séries et films favoris
                     </h2>
                 </p>
-                <p className={`text-left lg:text-xl tracking-wide`}>
+                <p className={`text-left md:text-lg lg:text-xl tracking-wide`}>
                     <ul className={`ml-8 list-disc`}>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Accédez rapidement aux films et série dans les catégories principales</li>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Trouver votre divertissement idéal grâce à la recherche avancée</li>
@@ -146,12 +147,12 @@ export default function LandingPage({ setLogged }) {
         </section>
     
         <section className={`px-[5.6vw] py-[10vw] h-36 flex justify-center`}>
-            <Button className={`w-80 h-12 text-base`}>
+            <Button className={`w-80 h-12 text-base text-grey-light`}>
                 s'inscrire
             </Button>
         </section>
     
-        
+    
         <section className={`px-[5.6vw] py-[10vw]`}>
             <p className={`w-full text-center mb-6`}>
                 <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
@@ -205,6 +206,52 @@ export default function LandingPage({ setLogged }) {
                             <li>Xbox Series S</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section className={`px-[5.6vw] py-[10vw]`}>
+            <p className={`w-full text-center mb-6`}>
+                <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
+                    Questions fréquentes
+                </h2>
+            </p>
+            <div className={`flex flex-col justify-center text-left md:text-lg lg:text-xl`}>
+                <div className={`w-full p-2`}>
+                    <Details summary="Qu'est-ce que Binge Watch ?">
+                        <p>
+                            Binge Watch vous donne accès à la plus grosses base de données sur les films, les séries, les dessins-animés et les mangas.
+                        </p>
+                    </Details>
+                </div>
+                <div className={`w-full p-2`}>
+                    <Details summary="Que vais-je trouver sur Binge Watch ?">
+                        <p className={`mb-2`}>
+                            Binge Watch récolte pour vous toutes les données disponibles sur la base IMDb et les trie par catégorie :
+                        </p>
+                        <ul className={`ml-8 mb-2 list-disc`}>
+                            <li>Aventure</li>
+                            <li>Science-Fiction</li>
+                            <li>Comédie</li>
+                            <li>Horreur</li>
+                            <li>Dessins-Animés</li>
+                            <li>Western</li>
+                            <li>Romance</li>
+                        </ul>
+                        <span>et bien d'autes !</span>
+                    </Details>
+                </div>
+                <div className={`w-full p-2`}>
+                    <Details summary="Quel est le prix de Binge Watch ?">
+                        <p>Les services de Binge Watch sont à <strong className={`text-grey-ultralight`}>0€ par mois à vie</strong>.</p>
+                        <p>Tout est gratuit, mais il faudra vous inscrire pour pouvoir utiliser les services personnalisés de Binge Watch :</p>
+                        <ul className={`ml-8 mt-2 list-disc`}>
+                            <li>Noter et commenter les films, les séries et tout ce que vous trouverez sur Binge Watch</li>
+                            <li>Enregistrer vos favoris pour les regarder plus tard</li>
+                            <li>Recevoir des propositions de divertissements personnalisées selon vos notes</li>
+                        </ul>
+                    </Details>
                 </div>
             </div>
         </section>

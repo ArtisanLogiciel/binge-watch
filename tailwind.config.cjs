@@ -22,10 +22,12 @@ module.exports = {
         '4.5': '18px'
       },
       colors: {
-        silver : '#a5a6a7',
         dark: '#040714',  // this is between black and navy
         grey: {
-          DEFAULT: '#31343e',
+          dark: '#31343e',
+          DEFAULT: '#a5a6a7',
+          light: '#e2e2e3',
+          ultralight: '#f9f9f9'
         },
         binge: {
           DEFAULT: '#ea9814',
