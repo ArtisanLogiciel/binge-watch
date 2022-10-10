@@ -18,7 +18,7 @@ export default function Button({ onClick, className, children }) {
       uppercase text-grey-ultralight text-xs sm:text-base md:text-lg sm:tracking-wider leading-4.5
        cursor-pointer transition-all duration-400 ${className}`}
       role={"Button"}
-      onClick={onClick}
+      onClick={()=> onClick()}
     >
       <span className={`inline align-text-top h-[15px] md:h-4`}>
         {children}

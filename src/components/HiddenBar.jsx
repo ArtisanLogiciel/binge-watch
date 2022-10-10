@@ -3,7 +3,7 @@ import Button from "./Button";
 import LogoLink from "./LogoLink";
 
 
-export default function HiddenBar({makeItVisible}) {
+export default function HiddenBar({makeItVisible, login}) {
     
     return (
         <div className={`fixed top-0 z-50 w-full h-[70px] flex justify-between items-center transition-colors
@@ -20,6 +20,7 @@ export default function HiddenBar({makeItVisible}) {
                 <Button
                     className={`leading-2 py-3 px-3 sm:py-3 sm:px-3
                     bg-black/75 border hover:bg-white hover:text-black `}
+                    onClick={login}
                 >
                     s'identifier
                 </Button>

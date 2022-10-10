@@ -6,7 +6,7 @@ import GoDown from "../components/GoDown";
 import Details from "../components/Details";
 
 
-export default function LandingPage({ setLogged }) {
+export default function LandingPage({ login }) {
     // INTERNAL STATES
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
@@ -82,7 +82,7 @@ export default function LandingPage({ setLogged }) {
   return (
     <div className={`text-grey bg-dark`}>
         
-        <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} />
+        <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} login={login} />
     
     
         <div className={`absolute w-screen h-screen top-0 mt-0 z-0`}>

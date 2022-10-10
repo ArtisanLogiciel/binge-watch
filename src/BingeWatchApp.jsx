@@ -21,19 +21,23 @@ function BingeWatchApp() {
   
   // INTERNAL STATES
   const [logged, setLogged] = useState(false); // sera remplacé par un état du AppContextProvider
+  
   useEffect(()=> {
-    const token = JSON.parse(localStorage.getItem("token")) // sera remplacé par un état du AppContextProvider
+    const token = localStorage.getItem("token") // sera remplacé par un état du AppContextProvider
     if (token) {setLogged(true)}
   }, [])
 
-  
+  function login() {
+    localStorage.setItem("token", 'binge')
+    setTimeout(function() {document.location.reload()},0);
+  }
   
   return (
     <div>
       <BrowserRouter>
           {!logged ?
               <Routes>
-                <Route path="/" element={<LandingPage />} />
+                <Route path="/" element={<LandingPage login={login} />}  />
                 <Route path="/login" element={<Login />} />
                 <Route path="/login/password" element={<Password />} />
                 <Route path="*" element={<LandingPage />} />
