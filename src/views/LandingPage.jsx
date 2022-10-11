@@ -98,7 +98,7 @@ export default function LandingPage({ login }) {
             
             <div className={`flex-1 flex flex-col justify-center md:w-37.5 lg:w-1/2 pt-[30vw] md:pt-[40vw] lg:pt-0 space-y-4`}>
                 <div className={`mx-auto lg:ml-0 lg:mb-7.5`}>
-                    <img src="./public/images/BingeLogo.png" alt="Logo Binge Watch" className={`h-36 lg:h-40`}/>
+                    <img src="/images/BingeLogo.png" alt="Logo Binge Watch" className={`h-36 lg:h-40`}/>
                 </div>
                 <p className={`text-center lg:text-left`}>
                     <h1 className={`text-2xl md:text-3xl lg:text-5xl font-Avenir font-bold leading-tight mb-2`}>
@@ -162,7 +162,7 @@ export default function LandingPage({ login }) {
             <div className={`flex flex-col md:flex-row justify-center text-center`}>
                 <div className={`flex justify-center`}>
                     <div className={`flex-1 px-2`}>
-                        <img src="./public/images/img_tv.png" alt="TV"/>
+                        <img src="/images/img_tv.png" alt="TV"/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Télévisions</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Amazon Fire TV</li>
@@ -175,7 +175,7 @@ export default function LandingPage({ login }) {
                         </ul>
                     </div>
                     <div className={`flex-1 px-2`}>
-                        <img src="./public/images/img_desktop.png" alt=""/>
+                        <img src="/images/img_desktop.png" alt=""/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Ordinateurs</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Chrome OS</li>
@@ -187,7 +187,7 @@ export default function LandingPage({ login }) {
                 </div>
                 <div className={`flex justify-center pt-8 md:pt-0`}>
                     <div className={`flex-1 px-2`}>
-                        <img src="./public/images/img_mobile.png" alt=""/>
+                        <img src="/images/img_mobile.png" alt=""/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Mobiles et tablettes</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Tablettes Amazon Fire</li>
@@ -196,7 +196,7 @@ export default function LandingPage({ login }) {
                         </ul>
                     </div>
                     <div className={`flex-1 px-2`}>
-                        <img src="./public/images/img_game.png" alt=""/>
+                        <img src="/images/img_game.png" alt=""/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Consoles de jeux</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>PS4</li>

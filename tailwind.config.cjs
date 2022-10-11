@@ -81,9 +81,9 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'landing': `url("./src/assets/images/bg-landing-base.jpeg")`,
-        'landing-lg': `url("./src/assets/images/bg-landing-lg.jpeg")`,
-        'preview': `url("./src/assets/images/landing-preview.png")`,
+        'landing': `url("/images/bg-landing-base.jpeg")`,
+        'landing-lg': `url("/images/bg-landing-lg.jpeg")`,
+        'preview': `url("/images/landing-preview.png")`,
       }
     },
   },
