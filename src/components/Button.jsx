@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 /**
  * Default style :
@@ -11,10 +11,17 @@ import React from "react";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Button({ onClick, className, children }) {
+export default function Button({ onClick, className, disabled, children }) {
+  const [hidden, setHidden] = useState(false)
+  
+  useEffect(()=> {
+    if (disabled) {setTimeout(()=>{setHidden(true)}, 500); return}
+    setHidden(false)
+  }, [disabled])
+  
   return (
     <div
-      className={`bg-binge flex justify-center items-center sm:p-4 md:p-4 lg:p-4 rounded-md
+      className={`bg-binge ${hidden ? 'hidden' : 'flex'} justify-center items-center sm:p-4 md:p-4 lg:p-4 rounded-md
       uppercase text-grey-ultralight text-xs sm:text-base md:text-lg sm:tracking-wider leading-4.5
        cursor-pointer transition-all duration-400 ${className}`}
       role={"Button"}
