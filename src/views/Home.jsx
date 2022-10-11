@@ -6,7 +6,7 @@ import {Sliders} from "../components/Sliders";
 import CategoryBar from "../components/CategoryBar";
 import Button from "../components/Button";
 
-function Home() {
+function Home({logout}) {
   return (
     <div>
       <BingeNavBar />
@@ -37,6 +37,7 @@ function Home() {
       <Sliders />
       <Sliders />
       <h1 className={`text-white text-4xl text-center`}>BingeWatch</h1>
+        <div onClick={()=>{logout()}}>VERSION TEST : Cliquer pour déconnecter</div>
     </div>
   );
 }

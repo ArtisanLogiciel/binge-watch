@@ -244,13 +244,27 @@ export default function LandingPage({ login }) {
                 </div>
                 <div className={`w-full p-2`}>
                     <Details summary="Quel est le prix de Binge Watch ?">
-                        <p>Les services de Binge Watch sont à <strong className={`text-grey-ultralight`}>0€ par mois à vie</strong>.</p>
-                        <p>Tout est gratuit, mais il faudra vous inscrire pour pouvoir utiliser les services personnalisés de Binge Watch :</p>
+                        <p className={`mb-2`}>Les services de Binge Watch sont à <strong className={`text-grey-ultralight`}>0€ par mois à vie</strong>.</p>
+                        <p className={`mb-2`}>Tout est gratuit, mais il faudra vous inscrire pour pouvoir utiliser les services personnalisés de Binge Watch :</p>
                         <ul className={`ml-8 mt-2 list-disc`}>
                             <li>Noter et commenter les films, les séries et tout ce que vous trouverez sur Binge Watch</li>
                             <li>Enregistrer vos favoris pour les regarder plus tard</li>
                             <li>Recevoir des propositions de divertissements personnalisées selon vos notes</li>
                         </ul>
+                    </Details>
+                </div>
+                <div className={`w-full p-2`}>
+                    <Details summary="L'inscription à Binge Watch est-elle définitive ?">
+                        <p className={`mb-2`}>Vous pouvez vous désinscrire de Binge Watch quand vous le voulez. Pour vous désinscrire suivez ces 5 étapes :</p>
+                        <ul className={`ml-8 mt-2 mb-2 list-decimal`}>
+                            <li>Identifiez-vous sur BingeWatch</li>
+                            <li>Sélectionnez "Compte" dans le menu utilisateur</li>
+                            <li>Sélectionnez "Se désinscrire"</li>
+                            <li>Modifiez si vous le souhaitez l'option "Conserver mes notes et commentaires"</li>
+                            <li>Sélectionnez "Confirmer"</li>
+                        </ul>
+                        <p className={`mb-2`}>Vos données personnelles seront supprimées. Si vous avez choisi de conserver vos notes et commentaires elles seront rendu anonymes.</p>
+                        <p>Les notes et commentaires anonymes seront conservés 6 mois.</p>
                     </Details>
                 </div>
             </div>

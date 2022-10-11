@@ -81,8 +81,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'landing': `url("./src/assets/images/bg-landing-base.jpeg")`,
-        'landing-lg': `url("./src/assets/images/bg-landing-lg.jpeg")`,
+        'landing': `url("/src/assets/images/bg-landing-base.jpeg")`,
+        'landing-lg': `url("/src/assets/images/bg-landing-lg.jpeg")`,
       }
     },
   },

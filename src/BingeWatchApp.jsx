@@ -26,9 +26,13 @@ function BingeWatchApp() {
     const token = localStorage.getItem("token") // sera remplacé par un état du AppContextProvider
     if (token) {setLogged(true)}
   }, [])
-
+  
   function login() {
     localStorage.setItem("token", 'binge')
+    setTimeout(function() {document.location.reload()},0);
+  }
+  function logout() {
+    localStorage.clear()
     setTimeout(function() {document.location.reload()},0);
   }
   
@@ -44,7 +48,7 @@ function BingeWatchApp() {
               </Routes>
               : // if logged
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home logout={logout}/>} />
                 <Route path="/home" element={<Home />} />
                 <Route path="*" element={<Error404 />} />
               </Routes>
