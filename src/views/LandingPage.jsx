@@ -162,7 +162,7 @@ export default function LandingPage({ login }) {
             <div className={`flex flex-col md:flex-row justify-center text-center`}>
                 <div className={`flex justify-center`}>
                     <div className={`flex-1 px-2`}>
-                        <img src="./src/assets/images/img_tv.png" alt="TV"/>
+                        <img src="/src/assets/images/img_tv.png" alt="TV"/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Télévisions</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Amazon Fire TV</li>
@@ -175,7 +175,7 @@ export default function LandingPage({ login }) {
                         </ul>
                     </div>
                     <div className={`flex-1 px-2`}>
-                        <img src="./src/assets/images/img_desktop.png" alt=""/>
+                        <img src="./src/assets/images/img_desktop.png" alt="Ordinateurs"/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Ordinateurs</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Chrome OS</li>
@@ -187,7 +187,7 @@ export default function LandingPage({ login }) {
                 </div>
                 <div className={`flex justify-center`}>
                     <div className={`flex-1 px-2`}>
-                        <img src="./src/assets/images/img_mobile.png" alt=""/>
+                        <img src="/src/assets/images/img_mobile.png" alt="Mobiles"/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Mobiles et tablettes</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>Tablettes Amazon Fire</li>
@@ -196,7 +196,7 @@ export default function LandingPage({ login }) {
                         </ul>
                     </div>
                     <div className={`flex-1 px-2`}>
-                        <img src="./src/assets/images/img_game.png" alt=""/>
+                        <img src="/src/assets/images/img_game.png" alt="Consoles"/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Consoles de jeux</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
                             <li>PS4</li>
