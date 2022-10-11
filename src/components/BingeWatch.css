@@ -57,7 +57,7 @@
 }
 
 .banner__image {
-  background-image: url("../assets/images/casa-de-papel.jpeg");
+  background-image: url("../../public/images/casa-de-papel.jpeg");
   width: calc(100% - 550px);
   height: 100%;
   position: absolute;
