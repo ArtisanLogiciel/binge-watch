@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useState} from "react";
+import {Link, Navigate} from "react-router-dom";
 import Button from "../components/Button";
 import HiddenBar from "../components/HiddenBar";
 import Input from "../components/Input";
@@ -6,7 +7,16 @@ import GoDown from "../components/GoDown";
 import Details from "../components/Details";
 
 
-export default function LandingPage({ login }) {
+export default function LandingPage() {
+    // USE CONTEXT
+    // simulation de la vérification du token
+    const [connected, setConnected] = useState(false)
+    useEffect(()=> {if (localStorage.getItem('token')) {
+        setConnected(true)
+        //setTimeout(function() {document.location.reload()},0);
+    }}, [])
+    
+    
     // INTERNAL STATES
     const [scrollY, setScrollY] = useState(0);
     const [windowHeight, setWindowHeight] = useState(0);
@@ -78,11 +88,12 @@ export default function LandingPage({ login }) {
     };*/
   
   
-  
   return (
-    <div className={`text-grey bg-dark`}>
+      connected ? <Navigate to={'/home'} replace={true} /> :
+      
+    <div className={`text-grey bg-dark-navy`}>
         
-        <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} login={login} />
+        <HiddenBar makeItVisible={scrollY > 0.8*windowHeight} />
     
     
         <div className={`absolute w-screen h-screen top-0 mt-0 z-0`}>
@@ -100,11 +111,9 @@ export default function LandingPage({ login }) {
                 <div className={`mx-auto lg:ml-0 lg:mb-7.5`}>
                     <img src="/images/BingeLogo.png" alt="Logo Binge Watch" className={`h-36 lg:h-40`}/>
                 </div>
-                <p className={`text-center lg:text-left`}>
-                    <h1 className={`text-2xl md:text-3xl lg:text-5xl font-Avenir font-bold leading-tight mb-2`}>
+                <h1 className={`block text-center lg:text-left text-2xl md:text-3xl lg:text-5xl font-Avenir font-bold leading-tight mb-2`}>
                         Where you want, when you want !
-                    </h1>
-                </p>
+                </h1>
                 <p className={`text-center text-lg lg:text-left lg:text-xl tracking-wide`}>
                     Entrez votre adresse email pour profiter de toutes les fonctionnalités.
                 </p>
