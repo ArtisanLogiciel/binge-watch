@@ -8,6 +8,7 @@ module.exports = {
       '2xs': '.625rem',
       'xs': '.75rem',
       'sm': '.875rem',
+      '15': ['15px', '1.6'],
       'base': '1rem',
       'lg': '1.125rem',
       'xl': '1.25rem',
@@ -22,9 +23,11 @@ module.exports = {
         '4.5': '18px'
       },
       colors: {
-        dark: '#040714',  // this is between black and navy
+        'dark-navy': '#040714',  // this is between black and navy
+        'dark-violet': '#0e0b14',  // this is between black and violet
         grey: {
           dark: '#31343e',
+          medium: '#1a1d29',
           DEFAULT: '#a5a6a7',
           light: '#e2e2e3',
           ultralight: '#f9f9f9'
@@ -56,6 +59,7 @@ module.exports = {
         '2.75':'0.6875rem',
         '4.5': '1.125rem',
         '7.5': '1.875rem',
+        '13': '52px',
         '15': '3.75rem',
         '18': '4.5rem',
         '22': '5.5rem',

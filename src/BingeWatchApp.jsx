@@ -12,6 +12,7 @@ import {
 import LandingPage from "./views/LandingPage";
 import Login from "./views/Login";
 import Password from "./views/Password";
+import Footer from "./components/Footer";
 
 
 
@@ -27,10 +28,8 @@ function BingeWatchApp() {
     if (token) {setLogged(true)}
   }, [])
   
-  function login() {
-    localStorage.setItem("token", 'binge')
-    setTimeout(function() {document.location.reload()},0);
-  }
+  
+  
   function logout() {
     localStorage.clear()
     setTimeout(function() {document.location.reload()},0);
@@ -39,21 +38,15 @@ function BingeWatchApp() {
   return (
     <div>
       <BrowserRouter>
-          {!logged ?
-              <Routes>
-                <Route path="/" element={<LandingPage login={login} />}  />
-                <Route path="/login" element={<Login />} />
-                <Route path="/login/password" element={<Password />} />
-                <Route path="*" element={<LandingPage />} />
-              </Routes>
-              : // if logged
-              <Routes>
-                <Route path="/" element={<Home logout={logout}/>} />
-                <Route path="/home" element={<Home />} />
-                <Route path="*" element={<Error404 />} />
-              </Routes>
-          }
+        <Routes>
+          <Route path="/" element={<LandingPage />}  />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login/password" element={<Password />} />
+          <Route path="/home" element={<Home logout={logout} />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
