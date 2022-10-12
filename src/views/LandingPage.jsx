@@ -195,7 +195,7 @@ export default function LandingPage({ login }) {
                             <li>iPhone & iPad</li>
                         </ul>
                     </div>
-                    <div className={`flex-1 px-2`}>
+                    <div className={`flex-1 px-2`} title="toto les bon tuyo">
                         <img src="/images/img_game.png" alt=""/>
                         <h3 className={`py-6 font-bold text-lg md:text-xl lg:text-2xl`}>Consoles de jeux</h3>
                         <ul className={`text-base md:text-lg lg:text-xl`}>
