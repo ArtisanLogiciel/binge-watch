@@ -18,7 +18,7 @@ function CategoryBarCard({ titled }) {
   return (
     <>
       <Link>
-        <div className="bg-gray-700 border-2 cursor-pointer text-center overflow-hidden w-52 py-9 rounded-md hover:scale-110 duration-500">
+        <div className="bg-gray-800 border-2 border-gray-700 rounded-xl cursor-pointer text-center overflow-hidden w-52 py-9 hover:scale-110 duration-500">
           {titled}
         </div>
       </Link>
