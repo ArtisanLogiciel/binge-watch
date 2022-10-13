@@ -63,7 +63,11 @@ export default function LandingPage() {
         window.addEventListener('orientationchange', sizeX);
         return () => window.removeEventListener('orientationchange', sizeX);
     }, [setWindowWidth])
-
+    
+    
+    // go to top at render
+    useEffect(()=> {window.scrollTo(0, 0)}, [])
+    
     
     function now() {
         let h = new Date;
