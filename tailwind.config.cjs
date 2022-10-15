@@ -70,7 +70,8 @@ module.exports = {
         strong: '0 10px 15px -3px rgba(0, 0, 0, 0.5)',
         flood: '0 10px 15px 5px',
         halo: '0 0 50px -5px',
-        belt: '0 0 22px 22px'
+        belt: '0 0 22px 22px',
+        card: '0px 20px 14px -10px rgba(83, 83, 98, 0.5)'
       },
       borderRadius: {
         'xs': '2px',
@@ -88,7 +89,7 @@ module.exports = {
         'landing': `url("/images/bg-landing-base.jpeg")`,
         'landing-lg': `url("/images/bg-landing-lg.jpeg")`,
         'preview': `url("/images/landing-preview.png")`,
-      }
+      },
     },
   },
   plugins: [],

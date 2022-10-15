@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Sliders({ data }) {
   return (
     <div className="my-5">
-      <h2 className="my-2 ml-5">Originals</h2>
-      <div className="flex justify-center align-center overflow-y-hidden space-x-4.5 mx-2 px-3">
+      <h2 className="ml-5">Originals</h2>
+      <div className="flex justify-center align-center overflow-y-hidden space-x-4.5 mx-2 px-3 py-7">
         <Card></Card>
         <Card></Card>
         <Card></Card>
@@ -27,15 +27,19 @@ function Card({ movie }) {
   return (
     <>
       <Link>
-        <div className="cursor-pointer overflow-hidden w-full object-contain max-h-25 mr-2.5 rounded-md hover:scale-110 duration-500">
-          <img src="src/assets/images/casa-de-papel.jpeg" alt="cardImg" />
+        <div className="cursor-pointer shadow-card overflow-hidden w-full h-34 object-cover mr-2.5 rounded-md hover:scale-110 duration-500">
+          <img
+            className="h-full"
+            src="public\images\marvel-studios-the-first-10-years-banner.jpg"
+            alt="cardImg"
+          />
         </div>
       </Link>
       {/* <Link key={movie.id} to={`/${type}/${movie.id}`}>
         <div className="">Hello</div>
       </Link> */}
     </>
-  )
+  );
 }
 
-export {Sliders, Card};
+export { Sliders, Card };
