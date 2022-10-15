@@ -55,7 +55,7 @@ function BingeNavBar() {
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\film-2-16.png" alt="icon" />
+          <img src="public\icons\film-reel-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               FILMS

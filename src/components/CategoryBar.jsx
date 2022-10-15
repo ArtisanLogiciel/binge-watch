@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function CategoryBar({ props }) {
   return (
-      <div className="flex justify-center align-center space-x-15 mx-7 my-20 px-20">
-        <CategoryBarCard titled={"THRILLER"}></CategoryBarCard>
-        <CategoryBarCard titled={"ADVENTURE"}></CategoryBarCard>
-        <CategoryBarCard titled={"S-F"}></CategoryBarCard>
-        <CategoryBarCard titled={"HORROR"}></CategoryBarCard>
-        <CategoryBarCard titled={"ANIME"}></CategoryBarCard>
-      </div>
-  )
+    <div className="flex justify-center align-center space-x-15 mx-7 my-20 px-20">
+      <CategoryBarCard titled={"THRILLER"}></CategoryBarCard>
+      <CategoryBarCard titled={"ADVENTURE"}></CategoryBarCard>
+      <CategoryBarCard titled={"S-F"}></CategoryBarCard>
+      <CategoryBarCard titled={"HORROR"}></CategoryBarCard>
+      <CategoryBarCard titled={"ANIME"}></CategoryBarCard>
+    </div>
+  );
 }
 
 function CategoryBarCard({ titled }) {

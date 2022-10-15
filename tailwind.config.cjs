@@ -22,6 +22,9 @@ module.exports = {
       lineHeight: {
         '4.5': '18px'
       },
+      letterSpacing: {
+        'xs': '-0.1px'
+      },
       colors: {
         'dark-navy': '#040714',  // this is between black and navy
         'dark-violet': '#0e0b14',  // this is between black and violet
@@ -89,6 +92,7 @@ module.exports = {
         'landing': `url("/images/bg-landing-base.jpeg")`,
         'landing-lg': `url("/images/bg-landing-lg.jpeg")`,
         'preview': `url("/images/landing-preview.png")`,
+        'logo': `url("public/images/BingeLogo.png")`
       },
     },
   },
