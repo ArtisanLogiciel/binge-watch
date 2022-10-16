@@ -1,15 +1,17 @@
 import React from "react";
 // import PopCorn from "../assets/images/popcorn.svg";
-import BingeNavBar from "../components/BingeNavBar";
+import NavBar from "../components/NavBar";
 import BingeHeader from "../components/BingeHeader";
 import {Sliders} from "../components/Sliders";
 import CategoryBar from "../components/CategoryBar";
 import Button from "../components/Button";
 
+
+
 function Home({logout}) {
   return (
     <div>
-      <BingeNavBar />
+      <NavBar />
       <BingeHeader />
       {/* <div className="bg-gray-900 h-screen flex justify-between">
         <Button

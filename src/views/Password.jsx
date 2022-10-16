@@ -28,7 +28,7 @@ export default function Password({props}) {
     return (
         connected  ? <Navigate to='/home' replace={true} /> :
             
-            <div className={`bg-grey-medium text-grey`}>
+            <div className={`bg-dark-blue text-grey`}>
                 <TopBar />
                 <div className={`flex justify-center text-left`}>
                     <div className={`flex flex-col w-96 h-screen -mb-64 py-8`}>

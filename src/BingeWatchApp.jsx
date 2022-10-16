@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Error404 from "./views/Error404";
-import NavBar from "./components/BingeNavBar";
 import { auth } from "../firebase-config";
 import {
   signInWithEmailAndPassword,

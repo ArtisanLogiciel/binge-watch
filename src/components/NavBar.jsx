@@ -8,6 +8,7 @@ import { styled, alpha } from "@mui/material/styles";
 //import AccountCircle from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
+import UserMenu from "./UserMenu";
 
 
 
@@ -51,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function BingeNavBar() {
+function NavBar() {
   const [auth, setAuth] = React.useState(true);
   const [appBarStyle, setAppBarStyle] = React.useState({
     background: "transparent",
@@ -107,6 +108,20 @@ function BingeNavBar() {
               Accueil
             </Typography>
           </Link>
+          <Search>
+            <SearchIconWrapper>
+              {/*
+              <SearchIcon />
+*/}
+            </SearchIconWrapper>
+            <StyledInputBase
+                // onKeyDown={}
+                // onChange={}
+                value="Search"
+                placeholder="Rechercher"
+                inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
           <Link to="/series">
             <Typography style={margin10} variant="h6">
               Séries
@@ -117,31 +132,12 @@ function BingeNavBar() {
               Films
             </Typography>
           </Link>
-          <Link to="/news">
+{/*          <Link to="/news">
             <Typography style={margin10} variant="h6">
               Animes
             </Typography>
-          </Link>
-          <Link to="/logged">
-            <Typography style={margin10} variant="h6">
-              Logged
-            </Typography>
-          </Link>
-          <Search>
-            <SearchIconWrapper>
-{/*
-              <SearchIcon />
-*/}
-            </SearchIconWrapper>
-            <StyledInputBase
-              // onKeyDown={}
-              // onChange={}
-              value="Search"
-              placeholder="Rechercher"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <div style={{ marginRight: "10px", marginLeft: "auto" }}>
+          </Link>*/}
+{/*          <div style={{ marginRight: "10px", marginLeft: "auto" }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -150,15 +146,17 @@ function BingeNavBar() {
               onClick={handleMenu}
               color="inherit"
             >
-{/*
+
               <AccountCircle />
-*/}
+
             </IconButton>
-          </div>
+          </div>*/}
+          <div id={'spacer'} className={`flex-1`}/>
+          <UserMenu />
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
-export default BingeNavBar;
+export default NavBar;
