@@ -63,7 +63,11 @@ export default function LandingPage() {
         window.addEventListener('orientationchange', sizeX);
         return () => window.removeEventListener('orientationchange', sizeX);
     }, [setWindowWidth])
-
+    
+    
+    // go to top at render
+    useEffect(()=> {window.scrollTo(0, 0)}, [])
+    
     
     function now() {
         let h = new Date;
@@ -139,19 +143,17 @@ export default function LandingPage() {
             <div className={`flex-1 md:mr-4 lg:mr-8 w-full h-full md:w-1/2 md:h-full bg-preview bg-contain bg-center bg-no-repeat`} />
             
             <div className={`flex-1 flex flex-col justify-center lg:justify-start md:w-37.5 lg:w-1/2 pt-0 lg:pt-0 space-y-4`}>
-                <p className={`text-center md:text-left`}>
-                    <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2`}>
-                        Notez, commentez et gardez vos séries et films favoris
-                    </h2>
-                </p>
-                <p className={`text-left md:text-lg lg:text-xl tracking-wide`}>
+                <h2 className={`text-center md:text-left text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2`}>
+                    Notez, commentez et gardez vos séries et films favoris
+                </h2>
+                <div className={`text-left md:text-lg lg:text-xl tracking-wide`}>
                     <ul className={`ml-8 list-disc`}>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Accédez rapidement aux films et série dans les catégories principales</li>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Trouver votre divertissement idéal grâce à la recherche avancée</li>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Notez et commentez pour aider les autres utilisateurs</li>
                         <li className={`mb-2 md:mb-3 lg:mb-4`}>Enregistrez vos favoris pour les voir et les revoir</li>
                     </ul>
-                </p>
+                </div>
             </div>
         </section>
     
@@ -163,11 +165,9 @@ export default function LandingPage() {
     
     
         <section className={`px-[5.6vw] py-[10vw]`}>
-            <p className={`w-full text-center mb-6`}>
-                <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
-                    Accessible sur vos appareils préférés
-                </h2>
-            </p>
+            <h2 className={`w-full text-center mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
+                Accessible sur vos appareils préférés
+            </h2>
             <div className={`flex flex-col md:flex-row justify-center text-center`}>
                 <div className={`flex justify-center`}>
                     <div className={`flex-1 px-2`}>
@@ -221,11 +221,9 @@ export default function LandingPage() {
         
         
         <section className={`px-[5.6vw] py-[10vw]`}>
-            <p className={`w-full text-center mb-6`}>
-                <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
-                    Questions fréquentes
-                </h2>
-            </p>
+            <h2 className={`w-full text-center mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight`}>
+                Questions fréquentes
+            </h2>
             <div className={`flex flex-col justify-center text-left md:text-lg lg:text-xl`}>
                 <div className={`w-full p-2`}>
                     <Details summary="Qu'est-ce que Binge Watch ?">

@@ -26,11 +26,15 @@ module.exports = {
         'xs': '-0.1px'
       },
       colors: {
-        'dark-navy': '#040714',  // this is between black and navy
-        'dark-violet': '#0e0b14',  // this is between black and violet
+        dark: {
+          navy: '#040714',  // this is between black and navy
+          violet: '#0e0b14',  // this is between black and violet
+          blue: '#1a1d29',
+        },
         grey: {
+          darker: '#131313',
           dark: '#31343e',
-          medium: '#1a1d29',
+          medium: '#404040',
           DEFAULT: '#a5a6a7',
           light: '#e2e2e3',
           ultralight: '#f9f9f9'
@@ -81,11 +85,15 @@ module.exports = {
         'sm': '3px'
       },
       animation: {
-        'appear': 'appear 700ms ease-in forwards'
+        'appear': 'appear 300ms 400ms ease-in both',
+        'line-drop': 'line-drop 320ms 80ms ease-in both'
       },
       keyframes: {
         appear: {
-          '0%, 15%': {opacity:'0'}, '100%': {opacity:'1'}
+          '0%': {opacity:'0'}, '100%': {opacity:'1'}
+        },
+        'line-drop': {
+          '0%': {height:0}, '100%': {height:'40px'}
         }
       },
       backgroundImage: {

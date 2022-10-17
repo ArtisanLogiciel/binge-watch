@@ -8,8 +8,9 @@ import { styled, alpha } from "@mui/material/styles";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
+import UserMenu from "./UserMenu";
 
-function BingeNavBar() {
+function NavBar() {
   const [auth, setAuth] = React.useState(true);
   const [appBarStyle, setAppBarStyle] = React.useState({
     background: "transparent",
@@ -83,7 +84,7 @@ function BingeNavBar() {
   );
 }
 
-export default BingeNavBar;
+export default NavBar;
 
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
@@ -146,8 +147,8 @@ export default BingeNavBar;
 //   return () => window.removeEventListener("scroll", onScroll);
 // });
 
-{
-  /* <AppBar className="bg-dark-navy" style={appBarStyle}>
+/*{
+  <AppBar className="bg-dark-navy" style={appBarStyle}>
   <Toolbar className="bg-dark-navy" >
     <img
       className="navBar__logo"
@@ -203,5 +204,7 @@ export default BingeNavBar;
       </IconButton>
     </div>
   </Toolbar>
-</AppBar> */
+</AppBar>
 }
+
+export default BingeNavBar;*/
