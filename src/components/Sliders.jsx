@@ -17,7 +17,7 @@ function Sliders({ data }) {
         })} */}
       </div>
     </div>
-  );
+  )
 }
 
 function Card({ movie }) {

@@ -31,13 +31,15 @@ function BingeNavBar() {
   };
 
   return (
-    <div className="mb-10 bg-dark-navy pb-1 -mt-3">
-      <nav className="flex justify-start items-center">
+    <div className="flex mb-10 bg-dark-navy pb-1 -mt-3 flex-col lg:flex-row lg:justify-start lg:items-center">
+      <div className="mx-auto mb-6 lg:mx-0 lg:mb-0">
         <img
           className="navBar__logo mr-20"
           src="public/images/BingeLogo.png"
           alt="Logo"
         />
+      </div>
+      <nav className="flex flex-wrap justify-center lg:justify-start lg:items-center">
         <div className="flex justify-center items-center mr-8">
           <img src="public\icons\home-6-16.png" alt="icon" />
           <Link to="/">

@@ -42,6 +42,7 @@ module.exports = {
         }
       },
       screens: {
+        'mm' : '425',
         //sm : 640
         //md : 768
         //lg : 1024
