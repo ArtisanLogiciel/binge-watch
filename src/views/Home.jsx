@@ -10,10 +10,8 @@ import Button from "../components/Button";
 
 function Home({logout}) {
   return (
-    <div>
-      <NavBar />
     <div className="bg-dark-navy">
-      <BingeNavBar />
+      <NavBar />
       <BingeHeader />
       <CategoryBar /> {/* Arranger la MaxWidth pour éviter le débordement sur la gauche de la page*/}
       <Sliders />

@@ -13,7 +13,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.7",
-    "@mui/styles": "^5.10.7",
+    "@mui/styles": "^5.10.9",
     "dotenv": "^16.0.3",
     "firebase": "^9.10.0",
     "react": "^18.2.0",

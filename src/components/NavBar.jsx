@@ -71,14 +71,11 @@ function NavBar() {
             </Typography>
           </Link>
         </div>
-        <div className="flex justify-center items-center mr-8">
-          <img src="public/icons/add-user-16.png" alt="icon" />
-          <Link to="/">
-            <Typography style={margin50} variant="h7">
-              LOGGED
-            </Typography>
-          </Link>
-        </div>
+        
+        <div className={`flex-1`}/>
+        
+        <UserMenu />
+
       </nav>
     </div>
   );
