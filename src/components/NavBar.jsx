@@ -36,11 +36,11 @@ function NavBar() {
       <nav className="flex justify-start items-center">
         <img
           className="navBar__logo mr-20"
-          src="public/images/BingeLogo.png"
+          src="/images/BingeLogo.png"
           alt="Logo"
         />
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\home-6-16.png" alt="icon" />
+          <img src="\icons\home-6-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               ACCUEIL
@@ -48,7 +48,7 @@ function NavBar() {
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\tv-16.png" alt="icon" />
+          <img src="\icons\tv-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               SERIES
@@ -56,21 +56,21 @@ function NavBar() {
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\film-reel-16.png" alt="icon" />
+          <img src="\icons\film-reel-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               FILMS
             </Typography>
           </Link>
         </div>
-        <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\fire-16.png" alt="icon" />
+{/*        <div className="flex justify-center items-center mr-8">
+          <img src="\icons\fire-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               ANIMES
             </Typography>
           </Link>
-        </div>
+        </div>*/}
         
         <div className={`flex-1`}/>
         

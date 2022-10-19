@@ -30,7 +30,7 @@ function Card({ movie }) {
         <div className="cursor-pointer shadow-card overflow-hidden w-full h-34 object-cover mr-2.5 rounded-md hover:scale-110 duration-500">
           <img
             className="h-full"
-            src="/public/images/marvel-studios-the-first-10-years-banner.jpg"
+            src="/images/marvel-studios-the-first-10-years-banner.jpg"
             alt="cardImg"
           />
         </div>
