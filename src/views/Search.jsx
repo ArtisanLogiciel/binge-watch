@@ -1,8 +1,13 @@
 import React from 'react';
+import Layout from "../components/Layout";
 
-export default function Search({props}) {
+export default function Search() {
     
     return (
-        <div>search</div>
+        <Layout>
+            test
+        
+        
+        </Layout>
     )
 }

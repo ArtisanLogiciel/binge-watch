@@ -100,7 +100,8 @@ module.exports = {
         'landing': `url("/images/bg-landing-base.jpeg")`,
         'landing-lg': `url("/images/bg-landing-lg.jpeg")`,
         'preview': `url("/images/landing-preview.png")`,
-        'logo': `url("public/images/BingeLogo.png")`
+        'logo': `url("public/images/BingeLogo.png")`,
+        'main': 'url("public/images/two_halo.png")'
       },
     },
   },
