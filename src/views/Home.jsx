@@ -8,7 +8,7 @@ import Button from "../components/Button";
 
 
 
-function Home({logout}) {
+function Home() {
   return (
     <div className="bg-dark-navy">
       <NavBar />
@@ -18,7 +18,6 @@ function Home({logout}) {
       <Sliders />
       <Sliders />
       <h1 className={`text-white text-4xl text-center`}>BingeWatch</h1>
-        <div onClick={()=>{logout()}}>VERSION TEST : Cliquer pour déconnecter</div>
     </div>
   );
 }
