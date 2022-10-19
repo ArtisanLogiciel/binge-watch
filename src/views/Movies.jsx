@@ -1,8 +1,11 @@
 import React from 'react';
+import Layout from "../components/Layout";
 
-export default function Movies({props}) {
+export default function Movies() {
     
     return (
-        <div>Name</div>
+        <Layout >
+            mouviz
+        </Layout>
     )
 }

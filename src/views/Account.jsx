@@ -1,8 +1,11 @@
 import React from 'react';
+import Layout from "../components/Layout";
 
 export default function Account({props}) {
     
     return (
-        <div>Compte</div>
+        <Layout >
+            Compte
+        </Layout>
     )
 }

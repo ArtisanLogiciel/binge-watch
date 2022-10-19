@@ -1,8 +1,11 @@
 import React from 'react';
+import Layout from "../components/Layout";
 
-export default function Help({props}) {
+export default function Help() {
     
     return (
-        <div>ALLLÈÈÈÈÈÈDDDDDDDDEEEEEE    !!!!!!!!</div>
+        <Layout >
+            ALLLÈÈÈÈÈÈDDDDDDDDEEEEEE    !!!!!!!!
+        </Layout>
     )
 }

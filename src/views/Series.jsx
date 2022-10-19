@@ -1,8 +1,11 @@
 import React from 'react';
+import Layout from "../components/Layout";
 
 export default function Series({props}) {
     
     return (
-        <div>Name</div>
+        <Layout >
+            sériz
+        </Layout>
     )
 }
