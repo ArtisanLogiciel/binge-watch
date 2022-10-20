@@ -30,11 +30,10 @@ function Card({ movie }) {
   // }
   return (
     <>
-      <Link>
+      <Link className={`mx-4.5 my-4.5`}>
         <div className={`cursor-pointer shadow-card overflow-hidden flex
         w-[75vw] sm:w-[40vw] lg:w-[28vw] xl:w-[23vw] 2xl:w-[15.5vw]
         min-w-[200px] max-w-[330px] aspect-card
-        mx-4.5 my-4.5
         rounded-md hover:scale-110 duration-500`}>
                 <img
                 className={`object-cover`}
