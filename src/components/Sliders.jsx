@@ -30,15 +30,15 @@ function Card({ movie }) {
   // }
   return (
     <>
-      <Link className={`mx-4.5 my-4.5`}>
+      <Link className={`mx-4.5 my-4.5`} to={`/detail/${movie?.id}`}>
         <div className={`cursor-pointer shadow-card overflow-hidden flex
-        w-[75vw] sm:w-[40vw] lg:w-[28vw] xl:w-[23vw] 2xl:w-[15.5vw]
-        min-w-[200px] max-w-[330px] aspect-card
-        rounded-md hover:scale-110 duration-500`}>
+        h-[75vw] sm:h-[40vw] lg:h-[28vw] xl:h-[23vw] 2xl:h-[15.5vw]
+        min-h-[200px] max-h-[330px] aspect-card-vertical
+        rounded-md hover:scale-100 duration-500`}>
                 <img
-                className={`object-cover`}
-                src="/images/marvel-studios-the-first-10-years-banner.jpg"
-                alt="cardImg"
+                className={`object-cover ${!movie && 'bg-binge/70 w-full' }`}
+                src={movie?.image}
+                alt={movie?.title || "pas d'image"}
             />
             </div>
       </Link>

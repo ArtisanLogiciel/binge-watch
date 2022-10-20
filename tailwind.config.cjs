@@ -88,15 +88,20 @@ module.exports = {
       },
       aspectRatio: {
         '4/3': '4 / 3',
-        card: '1.625'
+        card: '1.625',
+        'card-vertical': '0.6154'
       },
       animation: {
         'appear': 'appear 300ms 400ms ease-in both',
+        'disappear': 'disappear 300ms 400ms ease-in both',
         'line-drop': 'line-drop 320ms 80ms ease-in both'
       },
       keyframes: {
         appear: {
           '0%': {opacity:'0'}, '100%': {opacity:'1'}
+        },
+        disappear: {
+          '0%': {opacity:'1'}, '100%': {opacity:'0', visibility: 'hidden'}
         },
         'line-drop': {
           '0%': {height:0}, '100%': {height:'40px'}
