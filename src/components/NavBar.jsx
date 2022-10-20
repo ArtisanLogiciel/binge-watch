@@ -32,10 +32,10 @@ function NavBar() {
   };
 
   return (
-    <div className="mb-10 bg-dark-navy pb-1 -mt-3">
-      <nav className="flex justify-start items-center">
+    <div className="bg-dark-navy">
+      <nav className="flex justify-start items-center h-[72px]">
         <img
-          className="navBar__logo mr-20"
+          className="navBar__logo mr-20 h-15"
           src="/images/BingeLogo.png"
           alt="Logo"
         />
@@ -48,8 +48,16 @@ function NavBar() {
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
+          <img src="\icons\magnifying_glass.png" alt="icon" />
+          <Link to="/search">
+            <Typography style={margin50} variant="h7">
+              RECHERCHE
+            </Typography>
+          </Link>
+        </div>
+        <div className="flex justify-center items-center mr-8">
           <img src="\icons\tv-16.png" alt="icon" />
-          <Link to="/">
+          <Link to="/series">
             <Typography style={margin50} variant="h7">
               SERIES
             </Typography>
@@ -57,7 +65,7 @@ function NavBar() {
         </div>
         <div className="flex justify-center items-center mr-8">
           <img src="\icons\film-reel-16.png" alt="icon" />
-          <Link to="/">
+          <Link to="/movies">
             <Typography style={margin50} variant="h7">
               FILMS
             </Typography>

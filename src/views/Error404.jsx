@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-dom";
+import Layout from "../components/Layout";
+
+
 
 function Error404() {
-  return <div>Error404</div>;
+  return (
+      <Layout classname={`flex justify-center items-center`}>
+          <p>Erreur 404 : Page introuvable</p>
+      </Layout>
+  );
 }
 
 export default Error404;

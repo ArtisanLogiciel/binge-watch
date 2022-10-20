@@ -49,8 +49,8 @@ module.exports = {
         //sm : 640
         //md : 768
         //lg : 1024
-        //xl : 1280
-        '1440': '1440px',
+        xl : '1280px',
+        '2xl': '1440px',
         //2xl : 1536
         '3xl': '1600px',
         '4xl': '2000px'
@@ -70,8 +70,10 @@ module.exports = {
         '15': '3.75rem',
         '18': '4.5rem',
         '22': '5.5rem',
+        '25': '100px',
         '34': '8.5rem',
-        '37.5': '600px'
+        '37.5': '600px',
+        '43': '10.75rem'
       },
       boxShadow: {
         strong: '0 10px 15px -3px rgba(0, 0, 0, 0.5)',
@@ -83,6 +85,10 @@ module.exports = {
       borderRadius: {
         'xs': '2px',
         'sm': '3px'
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        card: '1.625'
       },
       animation: {
         'appear': 'appear 300ms 400ms ease-in both',
