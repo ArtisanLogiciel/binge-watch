@@ -52,7 +52,6 @@ function BingeWatchApp() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
