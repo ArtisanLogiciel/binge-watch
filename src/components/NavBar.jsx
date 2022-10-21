@@ -8,8 +8,9 @@ import { styled, alpha } from "@mui/material/styles";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
+import UserMenu from "./UserMenu";
 
-function BingeNavBar() {
+function NavBar() {
   const [auth, setAuth] = React.useState(true);
   const [appBarStyle, setAppBarStyle] = React.useState({
     background: "transparent",
@@ -34,14 +35,14 @@ function BingeNavBar() {
     <div className="flex mb-10 bg-dark-navy pb-1 -mt-3 flex-col lg:flex-row lg:justify-start lg:items-center">
       <div className="mx-auto mb-6 lg:mx-0 lg:mb-0">
         <img
-          className="navBar__logo mr-20"
-          src="public/images/BingeLogo.png"
+          className="navBar__logo mr-20 h-15"
+          src="/images/BingeLogo.png"
           alt="Logo"
         />
       </div>
       <nav className="flex flex-wrap justify-center lg:justify-start lg:items-center">
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\home-6-16.png" alt="icon" />
+          <img src="\icons\home-6-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               ACCUEIL
@@ -49,43 +50,48 @@ function BingeNavBar() {
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\tv-16.png" alt="icon" />
-          <Link to="/">
+          <img src="\icons\magnifying_glass.png" alt="icon" />
+          <Link to="/search">
+            <Typography style={margin50} variant="h7">
+              RECHERCHE
+            </Typography>
+          </Link>
+        </div>
+        <div className="flex justify-center items-center mr-8">
+          <img src="\icons\tv-16.png" alt="icon" />
+          <Link to="/series">
             <Typography style={margin50} variant="h7">
               SERIES
             </Typography>
           </Link>
         </div>
         <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\film-reel-16.png" alt="icon" />
-          <Link to="/">
+          <img src="\icons\film-reel-16.png" alt="icon" />
+          <Link to="/movies">
             <Typography style={margin50} variant="h7">
               FILMS
             </Typography>
           </Link>
         </div>
-        <div className="flex justify-center items-center mr-8">
-          <img src="public\icons\fire-16.png" alt="icon" />
+{/*        <div className="flex justify-center items-center mr-8">
+          <img src="\icons\fire-16.png" alt="icon" />
           <Link to="/">
             <Typography style={margin50} variant="h7">
               ANIMES
             </Typography>
           </Link>
-        </div>
-        <div className="flex justify-center items-center mr-8">
-          <img src="public/icons/add-user-16.png" alt="icon" />
-          <Link to="/">
-            <Typography style={margin50} variant="h7">
-              LOGGED
-            </Typography>
-          </Link>
-        </div>
+        </div>*/}
+        
+        <div className={`flex-1`}/>
+        
+        <UserMenu />
+
       </nav>
     </div>
   );
 }
 
-export default BingeNavBar;
+export default NavBar;
 
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
@@ -148,8 +154,8 @@ export default BingeNavBar;
 //   return () => window.removeEventListener("scroll", onScroll);
 // });
 
-{
-  /* <AppBar className="bg-dark-navy" style={appBarStyle}>
+/*{
+  <AppBar className="bg-dark-navy" style={appBarStyle}>
   <Toolbar className="bg-dark-navy" >
     <img
       className="navBar__logo"
@@ -205,5 +211,7 @@ export default BingeNavBar;
       </IconButton>
     </div>
   </Toolbar>
-</AppBar> */
+</AppBar>
 }
+
+export default BingeNavBar;*/

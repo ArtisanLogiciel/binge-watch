@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Error404 from "./views/Error404";
-import NavBar from "./components/BingeNavBar";
 import { auth } from "../firebase-config";
 import {
   signInWithEmailAndPassword,
@@ -13,6 +12,10 @@ import LandingPage from "./views/LandingPage";
 import Login from "./views/Login";
 import Password from "./views/Password";
 import Footer from "./components/Footer";
+import Search from "./views/Search";
+import Account from "./views/Account";
+import Help from "./views/Help";
+import Parameters from "./views/Parameters";
 
 
 
@@ -30,10 +33,6 @@ function BingeWatchApp() {
   
   
   
-  function logout() {
-    localStorage.clear()
-    setTimeout(function() {document.location.reload()},0);
-  }
   
   return (
     <div>
@@ -42,11 +41,17 @@ function BingeWatchApp() {
           <Route path="/" element={<LandingPage />}  />
           <Route path="/login" element={<Login />} />
           <Route path="/login/password" element={<Password />} />
-          <Route path="/home" element={<Home logout={logout} />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+  
+          <Route path="/parameters" element={<Parameters />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/help" element={<Help />} />
+          
+          
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

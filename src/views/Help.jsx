@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from "../components/Layout";
 
-export default function Movies() {
+export default function Help() {
     
     return (
         <Layout >
-            mouviz
+            ALLLÈÈÈÈÈÈDDDDDDDDEEEEEE    !!!!!!!!
         </Layout>
     )
 }

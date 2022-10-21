@@ -25,7 +25,7 @@ export default function Login({props}) {
     return (
         nOfTry > 2 ? <Navigate to='password' replace={true} /> :
         
-        <div className={`bg-grey-medium text-grey`}>
+        <div className={`bg-dark-blue text-grey`}>
             <TopBar />
             <div className={`flex justify-center text-left`}>
                 <div className={`flex flex-col w-96 h-screen -mb-64 py-8`}>

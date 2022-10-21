@@ -17,7 +17,7 @@
 }
 
 .banner__image {
-  background-image: url("./public/images/marvel-studios-the-first-10-years-banner.jpg");
+  background-image: url("/public/images/marvel-studios-the-first-10-years-banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;

@@ -26,11 +26,15 @@ module.exports = {
         'xs': '-0.1px'
       },
       colors: {
-        'dark-navy': '#040714',  // this is between black and navy
-        'dark-violet': '#0e0b14',  // this is between black and violet
+        dark: {
+          navy: '#040714',  // this is between black and navy
+          violet: '#0e0b14',  // this is between black and violet
+          blue: '#1a1d29',
+        },
         grey: {
+          darker: '#131313',
           dark: '#31343e',
-          medium: '#1a1d29',
+          medium: '#404040',
           DEFAULT: '#a5a6a7',
           light: '#e2e2e3',
           ultralight: '#f9f9f9'
@@ -46,8 +50,8 @@ module.exports = {
         //sm : 640
         //md : 768
         //lg : 1024
-        //xl : 1280
-        '1440': '1440px',
+        xl : '1280px',
+        '2xl': '1440px',
         //2xl : 1536
         '3xl': '1600px',
         '4xl': '2000px'
@@ -67,8 +71,10 @@ module.exports = {
         '15': '3.75rem',
         '18': '4.5rem',
         '22': '5.5rem',
+        '25': '100px',
         '34': '8.5rem',
-        '37.5': '600px'
+        '37.5': '600px',
+        '43': '10.75rem'
       },
       boxShadow: {
         strong: '0 10px 15px -3px rgba(0, 0, 0, 0.5)',
@@ -81,19 +87,33 @@ module.exports = {
         'xs': '2px',
         'sm': '3px'
       },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        card: '1.625',
+        'card-vertical': '0.6154'
+      },
       animation: {
-        'appear': 'appear 700ms ease-in forwards'
+        'appear': 'appear 300ms 400ms ease-in both',
+        'disappear': 'disappear 300ms 400ms ease-in both',
+        'line-drop': 'line-drop 320ms 80ms ease-in both'
       },
       keyframes: {
         appear: {
-          '0%, 15%': {opacity:'0'}, '100%': {opacity:'1'}
+          '0%': {opacity:'0'}, '100%': {opacity:'1'}
+        },
+        disappear: {
+          '0%': {opacity:'1'}, '100%': {opacity:'0', visibility: 'hidden'}
+        },
+        'line-drop': {
+          '0%': {height:0}, '100%': {height:'40px'}
         }
       },
       backgroundImage: {
         'landing': `url("/images/bg-landing-base.jpeg")`,
         'landing-lg': `url("/images/bg-landing-lg.jpeg")`,
         'preview': `url("/images/landing-preview.png")`,
-        'logo': `url("public/images/BingeLogo.png")`
+        'logo': `url("public/images/BingeLogo.png")`,
+        'main': 'url("public/images/two_halo.png")'
       },
     },
   },
