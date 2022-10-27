@@ -7,22 +7,18 @@ import {useSearch} from "../utils/useSearch";
 
 
 
-export default function Search() {
-    
+function Search() {
+    console.warn("SEARCH")
     const [focus, setFocus] = useState(false)
     const [valToSearch, setValToSearch] = useState("")
     
-    function handleChange(e) {
-        setValToSearch(e.target.value)
-/*        if (e.target?.value?.length > 1) {
-            // fetch db
-            
-        }*/
-    }
+    function handleChange(e) { setValToSearch(e.target.value) }
     
     
     return (
-        <Layout onClick={()=>setFocus(false)}>
+        <Layout
+            //onClick={()=>setFocus(false)}
+            >
             <div className={`fixed top-18 h-25 w-screen bg-grey-dark z-20 overflow-hidden`}>
                 <div className={`absolute h-56 w-screen bg-gradient-to-t from-grey-light/25 via-grey-light/15 transition-all duration-500 ${focus ? '-top-25' : 'top-0'}`} />
                     <input type="text"
@@ -60,6 +56,9 @@ export default function Search() {
     )
 }
 
+export default React.memo(Search)
+
+
 
 function Results({valToSearch}) {
     const {data, searching} = useSearch({endPointName:"Search", valToSearch: valToSearch})
@@ -79,3 +78,5 @@ function Results({valToSearch}) {
         </> : <>NO RESULT</>
     )
 }
+
+
