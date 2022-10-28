@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@mui/styles";
 import { createTheme } from "@mui/material/styles";
+import { UserContextProvider } from "./userContext";
 
 const theme = createTheme({
   palette: {
@@ -14,7 +15,11 @@ const theme = createTheme({
 });
 
 const AppContextProviders = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <UserContextProvider>{children}</UserContextProvider>
+    </ThemeProvider>
+  );
 };
 
 export { AppContextProviders };
