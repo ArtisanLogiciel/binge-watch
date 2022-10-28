@@ -18,9 +18,21 @@ export const useSearch = ({ endPointName = "", valToSearch = "" }) => {
 
     async function get() {
       if (valToSearch) {
-        axios.get(fullUrl).then((response) => {
-          //console.log(response.data);
-          setState({ data: response.data, searching: false });
+        /*axios.get(fullUrl)
+                    .then(response => {
+                        //console.log(response.data);
+                        setState({data: response.data, searching: false});
+                    })*/
+
+        // pour les tests
+        console.log("FETCH", fullUrl);
+        setState({
+          data: [
+            { id: "123", title: "hey", image: null },
+            { id: "456", title: "ho", image: null },
+            { id: "789", title: "toto", image: null },
+          ],
+          searching: false,
         });
       }
     }
