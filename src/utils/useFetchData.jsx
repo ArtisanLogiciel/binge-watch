@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -13,29 +13,30 @@ const reducer = (state, action) => {
   }
 };
 
-const initialState = {
-  data: null,
-  error: null,
-  status: idle,
-};
-
 function useFetchData(callback) {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const { data, status, error } = state;
+  const [state, dispatch] = useReducer(
+    reducer,
+    {
+      data: null,
+      error: null,
+      status: "idle",
+    },
+    (a) => a
+  );
 
-  const execute = useCallback((promise) => {
+  useEffect(() => {
+    const promise = callback();
+
+    if (!promise) return;
+
     dispatch({ type: "fetching" });
 
     promise
-      .then((data) => dispatch({ type: "done", payload: data }))
+      .then((marvel) => dispatch({ type: "done", payload: marvel }))
       .catch((error) => dispatch({ type: "fail", error }));
-  }, []);
+  }, [callback]);
 
-  const setData = useCallback((data) =>
-    dispatch({ type: "done", payload: data })
-  );
-
-  return { data, status, error, execute, setData };
+  return state;
 }
 
 export { useFetchData };

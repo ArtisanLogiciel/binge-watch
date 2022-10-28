@@ -4,20 +4,19 @@ import { Card, Sliders } from "../components/Sliders";
 import Cross from "../assets/cross.svg";
 import { useSearch } from "../utils/useSearch";
 
-export default function Search() {
+function Search() {
+  console.warn("SEARCH");
   const [focus, setFocus] = useState(false);
   const [valToSearch, setValToSearch] = useState("");
 
   function handleChange(e) {
     setValToSearch(e.target.value);
-    /*        if (e.target?.value?.length > 1) {
-            // fetch db
-            
-        }*/
   }
 
   return (
-    <Layout onClick={() => setFocus(false)}>
+    <Layout
+    //onClick={()=>setFocus(false)}
+    >
       <div
         className={`fixed top-18 h-25 w-screen bg-grey-dark z-20 overflow-hidden`}
       >
@@ -81,6 +80,8 @@ export default function Search() {
     </Layout>
   );
 }
+
+export default React.memo(Search);
 
 function Results({ valToSearch }) {
   const { data, searching } = useSearch({
