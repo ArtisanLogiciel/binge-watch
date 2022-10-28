@@ -11,7 +11,7 @@ import React, {useEffect, useState} from "react";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Button({ onClick, className, children }) {
+export default function Button({ onClick, className, children, type, ...props }) {
   
   return (
     <div
@@ -20,6 +20,7 @@ export default function Button({ onClick, className, children }) {
       uppercase text-grey-ultralight text-xs sm:text-base md:text-lg sm:tracking-wider leading-4.5
       ${className}`}
       role={"Button"} onClick={onClick}
+      type={type}
     >
       <span className={`inline align-text-top`}>
          {/*h-[15px] md:h-4*/}
