@@ -7,7 +7,7 @@ import LogoLink from "../components/LogoLink";
 
 export default function Login({ props }) {
   const navigate = useNavigate();
-  const { signIn } = useContext(UserContext);
+  // const { signIn } = useContext(UserContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

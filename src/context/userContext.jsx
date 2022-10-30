@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useCallback } from "react";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -17,11 +17,13 @@ export function UserContextProvider(props) {
   const [loadingData, setLoadingData] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setCurrentUser(currentUser);
-      setLoadingData(false);
-    });
-    return unsubscribe;
+    return () => {
+      onAuthStateChanged(auth, (currentUser) => {
+        setCurrentUser(currentUser);
+        currentUser ? console.log(currentUser) : console.log(null);
+        setLoadingData(false);
+      });
+    };
   }, []);
 
   return (
